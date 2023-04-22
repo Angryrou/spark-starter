@@ -6,6 +6,7 @@ We target on using the Spark version 3.2.1, JDK8, Scala 2.12, SBT 1.5.7.
     ```bash
     brew tap homebrew/cask-versions
     brew install --cask zulu8
+   
     # add under ~/.zshrc or ~/.bashrc
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
     # Please note that Zulu Community 8 will only be supported until March 2026.
@@ -28,4 +29,7 @@ We target on using the Spark version 3.2.1, JDK8, Scala 2.12, SBT 1.5.7.
    [success] Total time: 3 s, completed Apr 22, 2023 2:53:06 PM
     ```
 
-4. Run on IJ -- ALL SET.
+4. Run/Debug in Intellij
+   - Set JDK 8 and scala 2.12.17 in IJ project environment
+   - Hard-code the `spark.master` as `local[4]` in the program when starting a Spark session
+   - Run/Debug directly in Intellij
